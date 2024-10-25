@@ -107,3 +107,8 @@
     
 })(jQuery);
 
+$(function(){
+    $("#content").load("../tes.html"); 
+  });
+
+
