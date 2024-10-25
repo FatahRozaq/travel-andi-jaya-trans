@@ -25,6 +25,11 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -120,25 +125,30 @@
         <!-- Booking Start -->
         <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container">
-                <div class="bg-white shadow" style="padding: 35px;">
-                    <div class="row g-2">
-                        <div class="col-md-4">
+                <div class="bg-white shadow rounded" style="padding: 35px;">
+                    <h3 class="text-center mb-4">Cek Harga</h3>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-lg-4 col-md-6">
+                            <label for="asal" class="form-label">Pilih Asal</label>
                             <select id="asal" class="form-select" onchange="populateTujuan(); updateHarga();">
                                 <option value="" disabled selected>Pilih Asal</option>
                             </select>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4 col-md-6">
+                            <label for="tujuan" class="form-label">Pilih Tujuan</label>
                             <select id="tujuan" class="form-select" onchange="updateHarga()">
                                 <option value="" disabled selected>Pilih Tujuan</option>
                             </select>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4 col-md-6">
+                            <label for="harga" class="form-label">Harga</label>
                             <input type="text" id="harga" class="form-control" placeholder="Harga" readonly />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
+                
         <!-- Booking End -->
 
 
@@ -664,46 +674,46 @@
         // Data perjalanan dan harga
         const dataPerjalanan = {
             bandung: {
-                Tasikmalaya: "175K",
-                Garut: "175K",
-                Ciamis: "200K",
-                Pangandaran: "200K",
-                Banjar: "200K",
-                Karawang: "225K",
-                Cikarang: "225K",
-                Bekasi: "225K",
-                Jakarta: "250K",
-                Depok: "240K",
-                Bogor: "250K",
-                Tangerang: "250K",
-                "Bandara Halim": "240K",
-                "Bandara Soekarno": "250K"
+                Tasikmalaya: 175000,
+                Garut: 175000,
+                Ciamis: 200000,
+                Pangandaran: 200000,
+                Banjar: 200000,
+                Karawang: 225000,
+                Cikarang: 225000,
+                Bekasi: 225000,
+                Jakarta: 250000,
+                Depok: 240000,
+                Bogor: 250000,
+                Tangerang: 250000,
+                "Bandara Halim": 240000,
+                "Bandara Soekarno": 250000
             },
             tasikmalaya: {
-                Bandung: "175K",
-                Garut: "175K",
-                Karawang: "250K",
-                Cikarang: "250K",
-                Bekasi: "250K",
-                Jakarta: "275K",
-                Depok: "275K",
-                Bogor: "275K",
-                Tangerang: "275K",
-                "Bandara Halim": "275K",
-                "Bandara Soekarno": "275K"
+                Bandung: 175000,
+                Garut: 175000,
+                Karawang: 250000,
+                Cikarang: 250000,
+                Bekasi: 250000,
+                Jakarta: 275000,
+                Depok: 275000,
+                Bogor: 275000,
+                Tangerang: 275000,
+                "Bandara Halim": 275000,
+                "Bandara Soekarno": 275000
             },
             ciamis: {
-                Bandung: "200K",
-                Garut: "200K",
-                Karawang: "250K",
-                Cikarang: "250K",
-                Bekasi: "250K",
-                Jakarta: "275K",
-                Depok: "275K",
-                Bogor: "275K",
-                Tangerang: "275K",
-                "Bandara Halim": "275K",
-                "Bandara Soekarno": "300K"
+                Bandung: 200000,
+                Garut: 200000,
+                Karawang: 250000,
+                Cikarang: 250000,
+                Bekasi: 250000,
+                Jakarta: 275000,
+                Depok: 275000,
+                Bogor: 275000,
+                Tangerang: 275000,
+                "Bandara Halim": 275000,
+                "Bandara Soekarno": 300000
             }
         };
 
@@ -720,7 +730,7 @@
         function populateTujuan() {
             const asal = document.getElementById("asal").value;
             const tujuanSelect = document.getElementById("tujuan");
-            
+
             // Reset tujuan select box
             tujuanSelect.innerHTML = '<option value="" disabled selected>Pilih Tujuan</option>';
 
@@ -732,6 +742,11 @@
             }
         }
 
+        // Format angka ke format rupiah
+        function formatRupiah(angka) {
+            return "Rp" + angka.toLocaleString("id-ID");
+        }
+
         // Update harga berdasarkan pilihan asal dan tujuan
         function updateHarga() {
             const asal = document.getElementById("asal").value;
@@ -740,7 +755,7 @@
 
             // Cek apakah asal dan tujuan ada dalam data
             if (dataPerjalanan[asal] && dataPerjalanan[asal][tujuan]) {
-                hargaInput.value = dataPerjalanan[asal][tujuan];
+                hargaInput.value = formatRupiah(dataPerjalanan[asal][tujuan]);
             } else {
                 hargaInput.value = "Harga tidak ditemukan";
             }
@@ -755,6 +770,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             populateAsal();
         });
+
 
     </script>
 </body>
