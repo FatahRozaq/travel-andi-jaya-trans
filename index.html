@@ -47,13 +47,13 @@
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-start">
-                        <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+                        <h1 class="m-0 text-primary text-uppercase">LOGO</h1>
                     </a>
                 </div>
                 <div class="col-lg-9">
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0 d-flex justify-content-between">
                         <a href="index.html" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+                            <h1 class="m-0 text-primary text-uppercase">LOGO</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
@@ -122,44 +122,23 @@
             <div class="container">
                 <div class="bg-white shadow" style="padding: 35px;">
                     <div class="row g-2">
-                        <div class="col-md-10">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Adult</option>
-                                        <option value="1">Adult 1</option>
-                                        <option value="2">Adult 2</option>
-                                        <option value="3">Adult 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Child</option>
-                                        <option value="1">Child 1</option>
-                                        <option value="2">Child 2</option>
-                                        <option value="3">Child 3</option>
-                                    </select>
-                                </div>
-                            </div>
+                        <div class="col-md-4">
+                            <select id="asal" class="form-select" onchange="populateTujuan(); updateHarga();">
+                                <option value="" disabled selected>Pilih Asal</option>
+                            </select>
                         </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
+                        <div class="col-md-4">
+                            <select id="tujuan" class="form-select" onchange="updateHarga()">
+                                <option value="" disabled selected>Pilih Tujuan</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" id="harga" class="form-control" placeholder="Harga" readonly />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
         <!-- Booking End -->
 
 
@@ -242,7 +221,7 @@
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Junior Suite</h5>
+                                    <h5 class="mb-0">Travel Reguler</h5>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -256,7 +235,7 @@
                                     <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="text-body mb-3">Layanan hemat dengan rute dan jadwal pasti! Cocok untuk perjalanan rutin atau jarak jauh bersama penumpang lain. Kami akan memastikan Anda tiba tepat waktu di tempat tujuan dengan harga yang bersahabat.</p>
                                 <div class="d-flex justify-content-between">
                                     <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
@@ -272,7 +251,7 @@
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Executive Suite</h5>
+                                    <h5 class="mb-0">Travel Bandara</h5>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -286,7 +265,7 @@
                                     <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="text-body mb-3">Solusi praktis untuk perjalanan ke dan dari bandara! Kami menyediakan transportasi yang tepat waktu, nyaman, dan tanpa repot, langsung mengantar Anda sesuai jadwal penerbangan. Fokus saja pada perjalanan Anda, kami akan mengurus sisanya.</p>
                                 <div class="d-flex justify-content-between">
                                     <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
@@ -302,7 +281,7 @@
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Super Deluxe</h5>
+                                    <h5 class="mb-0">Travel Private</h5>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -316,7 +295,7 @@
                                     <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
-                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <p class="text-body mb-3">Rasakan kebebasan dan privasi dalam setiap perjalanan! Layanan eksklusif ini memungkinkan Anda menentukan rute dan waktu sesuai keinginan. Ideal untuk Anda yang menginginkan kenyamanan ekstra dan fleksibilitas penuh.</p>
                                 <div class="d-flex justify-content-between">
                                     <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
@@ -680,6 +659,104 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        // Data perjalanan dan harga
+        const dataPerjalanan = {
+            bandung: {
+                Tasikmalaya: "175K",
+                Garut: "175K",
+                Ciamis: "200K",
+                Pangandaran: "200K",
+                Banjar: "200K",
+                Karawang: "225K",
+                Cikarang: "225K",
+                Bekasi: "225K",
+                Jakarta: "250K",
+                Depok: "240K",
+                Bogor: "250K",
+                Tangerang: "250K",
+                "Bandara Halim": "240K",
+                "Bandara Soekarno": "250K"
+            },
+            tasikmalaya: {
+                Bandung: "175K",
+                Garut: "175K",
+                Karawang: "250K",
+                Cikarang: "250K",
+                Bekasi: "250K",
+                Jakarta: "275K",
+                Depok: "275K",
+                Bogor: "275K",
+                Tangerang: "275K",
+                "Bandara Halim": "275K",
+                "Bandara Soekarno": "275K"
+            },
+            ciamis: {
+                Bandung: "200K",
+                Garut: "200K",
+                Karawang: "250K",
+                Cikarang: "250K",
+                Bekasi: "250K",
+                Jakarta: "275K",
+                Depok: "275K",
+                Bogor: "275K",
+                Tangerang: "275K",
+                "Bandara Halim": "275K",
+                "Bandara Soekarno": "300K"
+            }
+        };
+
+        // Mengisi select box asal dengan data
+        function populateAsal() {
+            const asalSelect = document.getElementById("asal");
+            asalSelect.innerHTML = '<option value="" disabled selected>Pilih Asal</option>';
+            for (const asal in dataPerjalanan) {
+                asalSelect.innerHTML += `<option value="${asal}">${capitalizeFirstLetter(asal)}</option>`;
+            }
+        }
+
+        // Mengisi select box tujuan berdasarkan pilihan asal
+        function populateTujuan() {
+            const asal = document.getElementById("asal").value;
+            const tujuanSelect = document.getElementById("tujuan");
+            
+            // Reset tujuan select box
+            tujuanSelect.innerHTML = '<option value="" disabled selected>Pilih Tujuan</option>';
+
+            // Jika asal valid, masukkan opsi tujuan
+            if (dataPerjalanan[asal]) {
+                for (const tujuan in dataPerjalanan[asal]) {
+                    tujuanSelect.innerHTML += `<option value="${tujuan}">${tujuan}</option>`;
+                }
+            }
+        }
+
+        // Update harga berdasarkan pilihan asal dan tujuan
+        function updateHarga() {
+            const asal = document.getElementById("asal").value;
+            const tujuan = document.getElementById("tujuan").value;
+            const hargaInput = document.getElementById("harga");
+
+            // Cek apakah asal dan tujuan ada dalam data
+            if (dataPerjalanan[asal] && dataPerjalanan[asal][tujuan]) {
+                hargaInput.value = dataPerjalanan[asal][tujuan];
+            } else {
+                hargaInput.value = "Harga tidak ditemukan";
+            }
+        }
+
+        // Fungsi untuk capitalize string
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        // Memanggil fungsi populateAsal saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", function() {
+            populateAsal();
+        });
+
+    </script>
 </body>
 
 </html>
