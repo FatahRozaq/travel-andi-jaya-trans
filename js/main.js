@@ -107,8 +107,60 @@
     
 })(jQuery);
 
-$(function(){
-    $("#content").load("../tes.html"); 
-  });
 
+// function redirect(page) {
+//     window.location.href = "layout.html" + "?page=" + page;
+//   }
+
+//   var url_string = window.location.href;
+//   var url = new URL(url_string);
+//   var new_page = url.searchParams.get("page");
+
+//   if (new_page != null) {
+//     $.ajax({
+//       url: new_page + ".html",
+//       beforeSend: function () {
+//         // $("#content").html("Please wait...");
+//       },
+//       success: function (data) {
+//         $("#content").html(data);
+//       },
+//     });
+//   } else {
+//     $.ajax({
+//       url: "coba.html",
+//       beforeSend: function () {
+//         // $("#content").html("Please wait...");
+//       },
+//       success: function (data) {
+//         $("#content").html(data);
+//       },
+//     });
+//   }
+
+
+// Mengambil konten halaman secara dinamis
+function loadPage(page) {
+    fetch(`${page}.html`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Page not found');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.querySelector("#content").innerHTML = data;
+      })
+      .catch(error => console.error("Error:", error));
+  }
+  
+  // Cek parameter URL dan muat halaman yang sesuai
+  var urlParams = new URLSearchParams(window.location.search);
+  var page = urlParams.get("page");
+  
+  if (page) {
+    loadPage(page);
+  } else {
+    loadPage("coba"); // Halaman default jika tidak ada parameter
+  }
 
