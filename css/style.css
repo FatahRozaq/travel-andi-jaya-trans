@@ -495,3 +495,28 @@
     padding-right: 0;
     border-right: none;
 }
+
+.image-container{
+    position: relative;
+}
+
+.image1{
+    position: relative;
+    z-index: 3;
+}
+
+.image2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    margin-top: 15%;
+}
+
+.image3{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 30%;
+}

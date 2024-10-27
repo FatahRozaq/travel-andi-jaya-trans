@@ -126,18 +126,18 @@
         <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="bg-white shadow rounded" style="padding: 35px;">
-                    <h3 class="text-center mb-4">Cek Harga</h3>
+                    <h3 class="text-center mb-4">Cek Harga & Rute Pulang-Pergi</h3>
                     <div class="row g-3 align-items-center">
                         <div class="col-lg-4 col-md-6">
-                            <label for="asal" class="form-label">Pilih Asal</label>
+                            <label for="asal" class="form-label">Pilih Asal/Tujuan</label>
                             <select id="asal" class="form-select" onchange="populateTujuan(); updateHarga();">
-                                <option value="" disabled selected>Pilih Asal</option>
+                                <option value="" disabled selected>Pilih Asal/Tujuan</option>
                             </select>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <label for="tujuan" class="form-label">Pilih Tujuan</label>
+                            <label for="tujuan" class="form-label">Pilih Asal/Tujuan</label>
                             <select id="tujuan" class="form-select" onchange="updateHarga()">
-                                <option value="" disabled selected>Pilih Tujuan</option>
+                                <option value="" disabled selected>Pilih Asal/Tujuan</option>
                             </select>
                         </div>
                         <div class="col-lg-4 col-md-6">
@@ -167,7 +167,14 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-car fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">6</h2>
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <h2 class="mb-1 text-end m-0" data-toggle="counter-up">9</h2>
+                                            </div>
+                                            <div class="col p-0">
+                                                <h2 class="text-start m-0">+</h2>
+                                            </div>
+                                        </div>
                                         <p class="mb-0">Kendaraan</p>
                                     </div>
                                 </div>
@@ -176,7 +183,7 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-plane fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">3</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">3</h2>  
                                         <p class="mb-0">Layanan</p>
                                     </div>
                                 </div>
@@ -195,18 +202,19 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="row g-3">
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" style="margin-top: 25%;">
+                            <div class="col-6">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about.png">
                             </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg">
+                            <div class="col-6">
+                                <img class="img-fluid rounded w-100 h-100 wow zoomIn" data-wow-delay="0.3s" src="img/about1.jpg">
                             </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
+                            <div class="col-6">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.5s" src="img/about2.jpeg">
                             </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                            <div class="col-6">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about3.jpeg">
                             </div>
+                            <!-- <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/Header1.png"> -->
                         </div>
                     </div>
                 </div>
@@ -233,11 +241,11 @@
                                 <div class="d-flex justify-content-between mb-3">
                                     <h5 class="mb-0">Travel Reguler</h5>
                                     <div class="ps-2">
-                                        <!-- <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small> -->
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
@@ -261,11 +269,11 @@
                                 <div class="d-flex justify-content-between mb-3">
                                     <h5 class="mb-0">Travel Bandara</h5>
                                     <div class="ps-2">
-                                        <!-- <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small> -->
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
@@ -289,11 +297,11 @@
                                 <div class="d-flex justify-content-between mb-3">
                                     <h5 class="mb-0">Travel Private</h5>
                                     <div class="ps-2">
-                                        <!-- <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small> -->
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
