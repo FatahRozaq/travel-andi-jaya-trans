@@ -22,6 +22,13 @@
     z-index: 99;
 }
 
+/*** Logo ***/
+.navbar-logo {
+    height: 50px; 
+    width: 50px; 
+    border-radius: 50%;
+}
+
 
 /*** Spinner ***/
 #spinner {
