@@ -46,7 +46,7 @@ const dataPerjalanan = {
 // Mengisi select box asal dengan data
 function populateAsal() {
     const asalSelect = document.getElementById("asal");
-    asalSelect.innerHTML = '<option value="" disabled selected>Pilih Asal</option>';
+    asalSelect.innerHTML = '<option value="" disabled selected>Pilih Rute</option>';
     for (const asal in dataPerjalanan) {
         asalSelect.innerHTML += `<option value="${asal}">${capitalizeFirstLetter(asal)}</option>`;
     }

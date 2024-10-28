@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container-fluid bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -43,17 +43,19 @@
         <!-- Spinner End -->
 
         <!-- Header Start -->
-        <div class="container-fluid bg-dark px-lg-5">
+        <div class="container-fluid header bg-dark px-lg-5 fixed-top">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-start">
-                        <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+                        <img src="img/logo.PNG" class="navbar-logo" alt="">
+
+                        <h5 class="text-white m-4">Andi Jaya Trans</h5>
                     </a>
                 </div>
                 <div class="col-lg-9">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0 d-flex justify-content-between">
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0 d-flex justify-content-between header">
                         <a href="index.html" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+                            <img src="img/logo.PNG" class="navbar-logo" alt="">
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
@@ -61,7 +63,7 @@
                         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                             <div class="navbar-nav ms-auto py-0">
                                 <a href="index.html" class="nav-item nav-link">Beranda</a>
-                                <a href="layanan.html" class="nav-item nav-link">Layanan</a>
+                                <a href="service.html" class="nav-item nav-link">Layanan</a>
                                 <a href="booking.html" class="nav-item nav-link">Booking</a>
                                 <a href="about.html" class="nav-item nav-link">Tentang Kami</a>
                                 <a href="contact.html" class="nav-item nav-link">Kontak</a>
@@ -75,15 +77,15 @@
 
 
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel/1.jpg);">
             <div class="container-fluid page-header-inner py-5">
-                <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
+                <div class="container text-center pb-5" style="padding-top: 90px;">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Layanan Kami</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+                            <li class="breadcrumb-item text-white active" aria-current="page">Layanan</li>
                         </ol>
                     </nav>
                 </div>
@@ -92,193 +94,145 @@
         <!-- Page Header End -->
 
 
-        <!-- Booking Start -->
-        <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="bg-white shadow" style="padding: 35px;">
-                    <div class="row g-2">
-                        <div class="col-md-10">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Adult</option>
-                                        <option value="1">Adult 1</option>
-                                        <option value="2">Adult 2</option>
-                                        <option value="3">Adult 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Child</option>
-                                        <option value="1">Child 1</option>
-                                        <option value="2">Child 2</option>
-                                        <option value="3">Child 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Booking End -->
-
-
-        <!-- Service Start -->
-        <div class="container-xxl py-5">
+        <!-- Services Start -->
+        <div class="container-xxl py-3">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">Layanan Kami</h6>
+                    <h1 class="mb-5">Jelajahi <span class="text-primary text-uppercase">Layanan Kami</span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-hotel fa-2x text-primary"></i>
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/reguler.png" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Travel Reguler</h5>
+                                    <div class="ps-2">
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small class="me-3 pe-3"><i class="fa fa-phone-alt text-primary me-2"></i>0813-2205-8880</small>
+                                </div>
+                                <p class="text-body mb-3">Nikmati perjalanan hemat dengan kenyamanan maksimal bersama Paket Travel Reguler kami.</p>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-sm btn-primary rounded py-2 px-4" href="#" onclick="updateContent('reguler')">View Detail</button>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="#">Book Now</a>
                                 </div>
                             </div>
-                            <h5 class="mb-3">Rooms & Appartment</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-utensils fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Food & Restaurant</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </a>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-spa fa-2x text-primary"></i>
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/bandara.png" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Travel Bandara</h5>
+                                    <div class="ps-2">
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small class="me-3 pe-3"><i class="fa fa-phone-alt text-primary me-2"></i>0813-2205-8880</small>
+                                </div>
+                                <p class="text-body mb-3">Layanan antar-jemput bandara yang cepat, aman, dan nyaman untuk perjalanan tanpa repot.</p>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-sm btn-primary rounded py-2 px-4" onclick="updateContent('bandara')">View Detail</button>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="#">Book Now</a>
                                 </div>
                             </div>
-                            <h5 class="mb-3">Spa & Fitness</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-swimmer fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Sports & Gaming</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-glass-cheers fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h5 class="mb-3">Event & Party</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </a>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded p-1">
-                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-dumbbell fa-2x text-primary"></i>
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/private.png" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Travel Private</h5>
+                                    <div class="ps-2">
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                        <small class="fa fa-star text-warning"></small>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small class="me-3 pe-3"><i class="fa fa-phone-alt text-primary me-2"></i>0813-2205-8880</small>
+                                </div>
+                                <p class="text-body mb-3">Rasakan privasi dan fleksibilitas penuh dalam perjalanan dengan Paket Travel Private.</p>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-sm btn-primary rounded py-2 px-4" onclick="updateContent('private')">View Detail</button>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="#">Book Now</a>
                                 </div>
                             </div>
-                            <h5 class="mb-3">GYM & Yoga</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
-
-
-        <!-- Testimonial Start -->
-        <div class="container-xxl testimonial mt-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s" style="margin-bottom: 90px;">
-            <div class="container">
-                <div class="owl-carousel testimonial-carousel py-5">
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
-                    </div>
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
-                    </div>
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
-
-
-        <!-- Newsletter Start -->
-        <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 border rounded p-1">
-                    <div class="border rounded text-center p-1">
-                        <div class="bg-white rounded text-center p-5">
-                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
-                            <div class="position-relative mx-auto" style="max-width: 400px;">
-                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Newsletter Start -->
+        <!-- Services End -->
         
+        <!-- Description Start -->
+
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div id="detail" class="row g-5 align-items-center">
+                    <!-- reguler start -->
+                    <div class="col-lg-12">
+                        <h6 class="section-title text-start text-primary text-uppercase">Detail</h6>
+                        <h1 class="mb-4 mx-3">Travel <span class="text-primary text-uppercase">Reguler</span></h1>
+                        <p class="m-3" style="font-size: 20px;">Travel reguler dengan layanan door to door adalah jenis layanan perjalanan yang tetap menawarkan transportasi dengan jadwal dan rute yang sudah ditentukan, tapi dengan tambahan kemudahan yaitu penjemputan dan pengantaran penumpang langsung dari dan ke alamat tujuan. Layanan ini biasanya menggunakan kendaraan seperti minivan atau mobil travel.</p>
+                        
+                        <h2 class="mb-4 mx-3">Keunggulan Layanan <span class="text-primary text-uppercase">Door to Door</span></h2>
+                        <ol class="m-3" style="font-size: 20px;">
+                            <li><strong>Nyaman dan Praktis</strong> Kamu nggak perlu repot-repot datang ke terminal atau stasiun. Tinggal tunggu di rumah atau tempat yang sudah disepakati, dan travel akan menjemput kamu. Setibanya di kota tujuan, kamu juga akan diantar langsung ke alamat yang kamu mau.</li>
+                            <li><strong>Hemat Waktu dan Tenaga</strong> Layanan door to door ini sangat menghemat waktu dan tenaga. Nggak perlu lagi berganti-ganti kendaraan atau menunggu angkutan umum.</li>
+                        </ol>
+                        
+                        <h2 class="mb-4 mx-3">Jadwal Lebih Fleksibel</h2>
+                        <p class="mt-4 mx-3" style="font-size: 20px;">Salah satu daya tarik utama dari travel reguler dengan layanan door to door adalah jadwal yang lebih fleksibel dibandingkan travel reguler biasa. Meski tetap ada jadwal keberangkatan yang ditetapkan, namun perusahaan travel biasanya menyediakan beberapa opsi keberangkatan dalam sehari. Jadi, kamu punya lebih banyak pilihan waktu keberangkatan yang bisa disesuaikan dengan kebutuhanmu.</p>
+                        <ol class="mb-4 mx-3" style="font-size: 20px;">
+                            <li><strong>Lebih Banyak Pilihan Waktu</strong> Dengan banyaknya pilihan waktu keberangkatan, kamu bisa memilih jadwal yang paling sesuai dengan rencana perjalananmu. Nggak perlu terburu-buru atau menunggu terlalu lama.</li>
+                            <li><strong>Fleksibilitas dalam Merencanakan Perjalanan</strong> Jadwal yang fleksibel memudahkan kamu dalam merencanakan perjalanan, terutama jika ada perubahan mendadak. Kamu bisa dengan mudah mengatur ulang keberangkatan tanpa banyak kendala.</li>
+                        </ol>
+
+                        <h2 class="mb-4 mx-3">Tips <span class="text-primary text-uppercase">Memesan</span></h2>
+                        <ol class="m-3" style="font-size: 20px;">
+                            <li><strong>Pesan Tiket Lebih Awal:</strong> Untuk memastikan kamu mendapatkan jadwal yang sesuai dan tidak kehabisan tempat.</li>
+                            <li><strong>Berikan Alamat yang Jelas:</strong> Pastikan kamu memberikan alamat penjemputan dan pengantaran yang jelas agar sopir tidak kesulitan mencarimu.</li>
+                            <li><strong>Siap Lebih Awal:</strong> Meski jadwal lebih fleksibel, usahakan siap lebih awal untuk menghindari keterlambatan atau masalah penjemputan.</li>
+                            <li><strong>Cek Kembali Jadwal:</strong> Pastikan untuk selalu konfirmasi jadwal keberangkatanmu agar tidak terjadi miskomunikasi.
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- reguler end -->
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Description End -->
+
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
@@ -293,26 +247,27 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>JL. AL. Muhajirin No.91 Tanah Tinggi Kota Tanggerang</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>JL. Raya Batujajar Koperasi Tri Buana Kopasus Bandung Barat</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62 813 2205 8880</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <!-- <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p> -->
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                            <!-- <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a> -->
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-12">
-                        <div class="row gy-5 g-4">
-                            <div class="col-md-6">
+                        <!-- <div class="row gy-5 g-4"> -->
+                            <div class="col">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Quick Link</h6>
-                                <a class="btn btn-link" href="">Tentang Kami</a>
-                                <a class="btn btn-link" href="">Layanan</a>
-                                <a class="btn btn-link" href="">Booking</a>
-                                <a class="btn btn-link" href="">Kontak</a>
+                                <a class="btn btn-link" href="about.html">Tentang Kami</a>
+                                <a class="btn btn-link" href="service.html">Layanan</a>
+                                <a class="btn btn-link" href="booking.html">Booking</a>
+                                <a class="btn btn-link" href="contact.html">Kontak</a>
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -350,6 +305,124 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        function updateContent(contentId) {
+        const detailDiv = document.getElementById("detail");
+        
+        // Hapus konten lama
+        detailDiv.innerHTML = "";
+
+        // Tentukan konten baru berdasarkan ID konten yang dipilih
+        let newContent = "";
+
+        if (contentId === "reguler") {
+            newContent = `
+                    <div class="col-lg-12">
+                        <h6 class="section-title text-start text-primary text-uppercase">Detail</h6>
+                        <h1 class="mb-4 mx-3">Travel <span class="text-primary text-uppercase">Reguler</span></h1>
+                        <p class="m-3" style="font-size: 20px;">Travel reguler dengan layanan door to door adalah jenis layanan perjalanan yang tetap menawarkan transportasi dengan jadwal dan rute yang sudah ditentukan, tapi dengan tambahan kemudahan yaitu penjemputan dan pengantaran penumpang langsung dari dan ke alamat tujuan. Layanan ini biasanya menggunakan kendaraan seperti minivan atau mobil travel.</p>
+                        
+                        <h2 class="mb-4 mx-3">Keunggulan Layanan <span class="text-primary text-uppercase">Door to Door</span></h2>
+                        <ol class="m-3" style="font-size: 20px;">
+                            <li><strong>Nyaman dan Praktis</strong> Kamu nggak perlu repot-repot datang ke terminal atau stasiun. Tinggal tunggu di rumah atau tempat yang sudah disepakati, dan travel akan menjemput kamu. Setibanya di kota tujuan, kamu juga akan diantar langsung ke alamat yang kamu mau.</li>
+                            <li><strong>Hemat Waktu dan Tenaga</strong> Layanan door to door ini sangat menghemat waktu dan tenaga. Nggak perlu lagi berganti-ganti kendaraan atau menunggu angkutan umum.</li>
+                        </ol>
+                        
+                        <h2 class="mb-4 mx-3">Jadwal Lebih Fleksibel</h2>
+                        <p class="mt-4 mx-3" style="font-size: 20px;">Salah satu daya tarik utama dari travel reguler dengan layanan door to door adalah jadwal yang lebih fleksibel dibandingkan travel reguler biasa. Meski tetap ada jadwal keberangkatan yang ditetapkan, namun perusahaan travel biasanya menyediakan beberapa opsi keberangkatan dalam sehari. Jadi, kamu punya lebih banyak pilihan waktu keberangkatan yang bisa disesuaikan dengan kebutuhanmu.</p>
+                        <ol class="mb-4 mx-3" style="font-size: 20px;">
+                            <li><strong>Lebih Banyak Pilihan Waktu</strong> Dengan banyaknya pilihan waktu keberangkatan, kamu bisa memilih jadwal yang paling sesuai dengan rencana perjalananmu. Nggak perlu terburu-buru atau menunggu terlalu lama.</li>
+                            <li><strong>Fleksibilitas dalam Merencanakan Perjalanan</strong> Jadwal yang fleksibel memudahkan kamu dalam merencanakan perjalanan, terutama jika ada perubahan mendadak. Kamu bisa dengan mudah mengatur ulang keberangkatan tanpa banyak kendala.</li>
+                        </ol>
+
+                        <h2 class="mb-4 mx-3">Tips <span class="text-primary text-uppercase">Memesan</span></h2>
+                        <ol class="m-3" style="font-size: 20px;">
+                            <li><strong>Pesan Tiket Lebih Awal:</strong> Untuk memastikan kamu mendapatkan jadwal yang sesuai dan tidak kehabisan tempat.</li>
+                            <li><strong>Berikan Alamat yang Jelas:</strong> Pastikan kamu memberikan alamat penjemputan dan pengantaran yang jelas agar sopir tidak kesulitan mencarimu.</li>
+                            <li><strong>Siap Lebih Awal:</strong> Meski jadwal lebih fleksibel, usahakan siap lebih awal untuk menghindari keterlambatan atau masalah penjemputan.</li>
+                            <li><strong>Cek Kembali Jadwal:</strong> Pastikan untuk selalu konfirmasi jadwal keberangkatanmu agar tidak terjadi miskomunikasi.
+                            </li>
+                        </ol>
+                    </div>
+            `;
+        } else if (contentId === "bandara") {
+            newContent = `
+                    <div class="col-lg-12">
+                        <h6 class="section-title text-start text-primary text-uppercase">Detail</h6>
+                        <h1 class="mb-4 mx-3">Travel <span class="text-primary text-uppercase">Bandara</span></h1>
+                        <p class="m-3" style="font-size: 20px;">Halo, teman-teman! Pernah kebingungan gimana caranya pergi ke bandara dengan nyaman dan tepat waktu? Nah, Andi Jaya Trans hadir dengan solusi ciamik buat kamu: layanan Travel Bandara! Yuk, kita bahas lebih dalam apa itu Travel Bandara bersama ANDI JAYA TRANS dan kenapa ini bisa jadi pilihan terbaik untuk perjalananmu.</p>
+                        <p class="m-3" style="font-size: 20px;">Travel Bandara adalah layanan transportasi yang khusus dirancang untuk mengantar dan menjemput penumpang dari dan ke bandara. Layanan ini menggunakan kendaraan seperti minivan atau mobil travel yang nyaman dan berkapasitas cukup untuk menampung penumpang beserta barang bawaannya.</p>
+                        
+                        <h2 class="mb-4 mx-3">Keunggulan <span class="text-primary text-uppercase">Travel Bandara</span> bersama Andi Jaya Trans</h2>
+                        <ol class="m-3" style="font-size: 20px;">
+                            <li><strong>Fleksibilitas Jadwal</strong> Layanan ini tersedia sepanjang hari, sehingga kamu bisa memilih waktu penjemputan yang paling sesuai dengan jadwal penerbanganmu, baik itu penerbangan pagi, siang, atau malam.</li>
+                            <li><strong>Tepat Waktu</strong> adalah salah satu kunci utama layanan Travel Bandara. Andi Jaya Trans memastikan bahwa kamu tiba di bandara tepat waktu, tanpa perlu khawatir ketinggalan pesawat. Jadwal keberangkatan disesuaikan dengan jam penerbanganmu sehingga perjalananmu jadi lebih tenang.</li>
+                            <li><strong>Layanan Door to Door</strong> Andi Jaya Trans menawarkan layanan door to door, artinya kamu akan dijemput langsung dari rumah atau lokasi yang kamu tentukan dan diantar langsung ke bandara. Begitu juga sebaliknya, saat tiba di bandara, kamu akan dijemput dan diantar ke alamat tujuanmu. Praktis banget, kan?</li>
+                            <li><strong>Kendaraan Nyaman dan Aman</strong> Kendaraan yang digunakan oleh Andi Jaya Trans terawat dengan baik, bersih, dan nyaman. Sopir yang berpengalaman dan profesional akan memastikan perjalananmu aman dan menyenangkan.</li>
+                            <li><strong>Harga Terjangkau</strong> Sesuai dengan namanya, Andi Jaya Trans menawarkan harga yang sangat bersahabat di kantong. Kamu bisa menikmati layanan premium tanpa harus merogoh kocek terlalu dalam.</li>
+                        </ol>
+
+                        <h2 class="mb-4 mx-3">Keamanan dan <span class="text-primary text-uppercase">Kenyamanan</span></h2>
+                        <p class="m-3" style="font-size: 20px;">Andi Jaya Trans juga sangat memperhatikan keamanan dan kenyamanan penumpang. Setiap kendaraan dilengkapi dengan fasilitas pendukung seperti AC, kursi yang nyaman, dan bagasi yang luas. Selain itu, setiap perjalanan dioperasikan oleh sopir yang telah berpengalaman dan memiliki lisensi resmi.</p>
+                        
+                        <h2 class="mb-4 mx-3">Cara Pesan <span class="text-primary text-uppercase">Travel Bandara</span></h2>
+                        <ol class="m-3" style="font-size: 20px;">
+                            <li><strong>Kunjungi Website atau Aplikasi:</strong> Kamu bisa mengakses layanan ini melalui website resmi Andi Jaya Trans atau aplikasi yang tersedia di smartphone.</li>
+                            <li><strong>Isi Data Perjalanan:</strong> Masukkan detail perjalananmu, seperti alamat penjemputan, tujuan (bandara), waktu penjemputan, dan jumlah penumpang.</li>
+                            <li><strong>Pilih Kendaraan:</strong> Pilih jenis kendaraan yang sesuai dengan kebutuhanmu. Andi Jaya Trans menyediakan berbagai pilihan kendaraan yang bisa kamu sesuaikan.</li>
+                            <li><strong>Konfirmasi dan Bayar:</strong> Setelah semua data lengkap, konfirmasi pesananmu dan lakukan pembayaran. Kamu akan menerima konfirmasi pemesanan via email atau SMS.</li>
+                            <li><strong>Nikmati Perjalananmu:</strong> Pada hari H, tinggal tunggu kendaraan datang menjemputmu dan nikmati perjalanan yang nyaman dan tepat waktu menuju bandara.</li>
+                        </ol>
+                    </div>
+            `;
+        } else if (contentId === "private") {
+            newContent = `
+                    <div class="col-lg-12">
+                        <h6 class="section-title text-start text-primary text-uppercase">Detail</h6>
+                        <h1 class="mb-4 mx-3">Travel <span class="text-primary text-uppercase">Private</span></h1>
+                        <p class="m-3" style="font-size: 20px;">Travel Private/Charter adalah layanan transportasi yang memungkinkan kamu untuk menyewa kendaraan secara eksklusif. Artinya, kendaraan tersebut hanya akan digunakan oleh kamu dan rombonganmu saja, tanpa penumpang lain. Layanan ini sangat cocok untuk perjalanan keluarga, liburan bersama teman, acara perusahaan, atau kebutuhan khusus lainnya.</p>
+                        <p class="m-3" style="font-size: 20px;">Travel Private/Charter di Andi Jaya Trans adalah pilihan terbaik untuk kamu yang menginginkan perjalanan yang nyaman, fleksibel, dan eksklusif. Dengan berbagai keunggulan seperti privasi penuh, fleksibilitas waktu dan rute, kendaraan yang nyaman, serta layanan door to door, perjalananmu bersama rombongan akan jadi lebih menyenangkan dan bebas repot.</p>
+                    
+                        <h2 class="mb-4 mx-3">Keunggulan <span class="text-primary text-uppercase">Travel Private</span></h2>
+                        <ol class="m-3" style="font-size: 20px;">
+                            <li><strong>Eksklusivitas dan Privasi</strong> Dengan menyewa kendaraan secara charter, kamu mendapatkan privasi penuh selama perjalanan. Nggak perlu berbagi dengan penumpang lain, sehingga perjalanan jadi lebih nyaman dan bebas gangguan.</li>
+                            <li><strong>Fleksibilitas Waktu dan Rute</strong> Salah satu keuntungan utama dari layanan charter adalah fleksibilitas. Kamu bisa menentukan sendiri waktu keberangkatan dan rute perjalanan. Mau berhenti sejenak untuk makan siang, atau mampir ke tempat wisata? Semuanya bisa diatur sesuai keinginanmu.</li>
+                            <li><strong>Kendaraan Nyaman dan Bervariasi</strong> Andi Jaya Trans menawarkan berbagai pilihan kendaraan, mulai dari minivan, SUV, hingga bus. Semua kendaraan terawat dengan baik, bersih, dan dilengkapi fasilitas yang mendukung kenyamanan perjalananmu.</li>
+                            <li><strong>Layanan Door to Door</strong> Seperti layanan lainnya, Travel Private/Charter juga menyediakan layanan door to door. Kamu akan dijemput langsung dari lokasi yang kamu tentukan dan diantar sampai ke tujuan. Praktis dan tanpa repot!</li>
+                            <li><strong>Sopir Profesional dan Berpengalaman</strong> Semua sopir di Andi Jaya Trans adalah profesional dan berpengalaman. Mereka siap memastikan perjalananmu aman, nyaman, dan menyenangkan.</li>
+                        </ol>
+
+                        <h2 class="mb-4 mx-3">Kapan Menggunakan <span class="text-primary text-uppercase">Travel Private?</span></h2>
+                        <ol class="m-3" style="font-size: 20px;">
+                            <li><strong>Liburan Keluarga atau Teman</strong> Liburan dengan keluarga besar atau teman-teman jadi lebih seru dan praktis dengan travel charter. Nggak perlu lagi khawatir terpisah-pisah atau repot dengan transportasi umum.</li>
+                            <li><strong>Acar Perusahaan</strong> Untuk acara perusahaan seperti outing, seminar, atau meeting di luar kota, travel charter bisa jadi pilihan yang tepat. Semua peserta bisa berangkat bersama dalam satu kendaraan yang nyaman.</li>
+                            <li><strong>Perjalanan Wisata</strong> Ingin mengunjungi beberapa tempat wisata dalam satu hari? Dengan travel charter, kamu bebas menentukan destinasi dan waktu kunjungan tanpa terikat jadwal transportasi umum.</li>
+                            <li><strong>Kebutuhan Khusus</strong> Ada kebutuhan khusus seperti pernikahan, acara keluarga, atau event besar lainnya? Travel charter bisa disesuaikan dengan kebutuhan spesifikmu, memastikan semua tamu atau peserta bisa diangkut dengan nyaman dan tepat waktu.</li>
+                        </ol>
+
+                        <h2 class="mb-4 mx-3">Cara Memesan <span class="text-primary text-uppercase">Travel Private</span></h2>
+                        <ol class="m-3" style="font-size: 20px;">
+                            <li><strong>Kunjungi Website atau Aplikasi:</strong> Akses layanan ini melalui website resmi Andi Jaya Trans atau aplikasi di smartphone.</li>
+                            <li><strong>Pilih Jenis Kendaraan:</strong> Tentukan jenis kendaraan yang sesuai dengan jumlah penumpang dan kebutuhanmu.</li>
+                            <li><strong>Isi Data Perjalanan:</strong> Masukkan detail perjalanan seperti lokasi penjemputan, tujuan, waktu keberangkatan, dan rute yang diinginkan.</li>
+                            <li><strong>Konfirmasi dan Bayar:</strong> Setelah semua data lengkap, konfirmasi pesananmu dan lakukan pembayaran. Kamu akan menerima konfirmasi pemesanan via email atau SMS.</li>
+                            <li><strong>Nikmati Perjalananmu:</strong> Pada hari H, kendaraan akan datang menjemputmu sesuai waktu yang ditentukan. Nikmati perjalanan dengan nyaman dan eksklusif bersama rombonganmu.</li>
+                        </ol>
+                    
+                        <p class="m-3" style="font-size: 20px;">Jadi, tunggu apa lagi? Pesan sekarang di Andi Jaya Trans dan nikmati kemudahan serta kenyamanan perjalanan charter yang eksklusif. Selamat menikmati perjalananmu! 🚐✨</p>
+                    
+                    </div>
+                `;
+            }
+
+            // Tambahkan konten baru ke div
+            detailDiv.innerHTML = newContent;
+
+            // Scroll ke konten yang baru ditambahkan
+            detailDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    </script>
 </body>
 
 </html>
