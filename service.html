@@ -125,7 +125,7 @@
                                 <p class="text-body mb-3">Nikmati perjalanan hemat dengan kenyamanan maksimal bersama Paket Travel Reguler kami.</p>
                                 <div class="d-flex justify-content-between">
                                     <button class="btn btn-sm btn-primary rounded py-2 px-4" href="#" onclick="updateContent('reguler')">View Detail</button>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="#">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="https://wa.me/6281322058880" target="_blank">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                                 <p class="text-body mb-3">Layanan antar-jemput bandara yang cepat, aman, dan nyaman untuk perjalanan tanpa repot.</p>
                                 <div class="d-flex justify-content-between">
                                     <button class="btn btn-sm btn-primary rounded py-2 px-4" onclick="updateContent('bandara')">View Detail</button>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="#">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="https://wa.me/6281322058880" target="_blank">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +181,7 @@
                                 <p class="text-body mb-3">Rasakan privasi dan fleksibilitas penuh dalam perjalanan dengan Paket Travel Private.</p>
                                 <div class="d-flex justify-content-between">
                                     <button class="btn btn-sm btn-primary rounded py-2 px-4" onclick="updateContent('private')">View Detail</button>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="#">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="https://wa.me/6281322058880" target="_blank">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -307,6 +307,16 @@
     <script src="js/main.js"></script>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const contentId = urlParams.get("contentId");
+
+            if (contentId) {
+                updateContent(contentId);
+            }
+        });
+
         function updateContent(contentId) {
         const detailDiv = document.getElementById("detail");
         
